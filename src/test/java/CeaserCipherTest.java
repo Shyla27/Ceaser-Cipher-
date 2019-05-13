@@ -1,7 +1,10 @@
 import org.junit.*;
-import static org.junit.Assert.*;
+import static org.junit.Assert.
+import java.util.List;
+import  java.util.ArrayList;
 
-public class CeaserCipherTest{
+
+
 
     @Test
     public void rotateCharacter_ShiftsCharacterCorrectNumberofTimesAtEndOfAlphabet_char(){
@@ -17,8 +20,5 @@ public class CeaserCipherTest{
 
         assertEquals(expectedOutput, CeaserCipher.cipher(input, 7));
     }
-
-
-
 
 }
