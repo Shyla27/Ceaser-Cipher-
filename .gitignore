@@ -19,7 +19,8 @@
 *.zip
 
 # Logs and databases #
-############
+############gradle test 
+
 *.log
 
 # OS generated files #

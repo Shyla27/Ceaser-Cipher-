@@ -1,3 +1,5 @@
+package CeaserCipher;
+
 import java.util.Scanner;
 
 import static CeaserCipher.CeaserCipher.cipher;
