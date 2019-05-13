@@ -3,7 +3,6 @@ package cc;
 import java.util.Scanner;
 
 public class CeaserCipher {
-    // This rotates a character k-positions
 
     private String mText;
     private int mShift;
