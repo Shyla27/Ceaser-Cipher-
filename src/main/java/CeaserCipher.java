@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class CeaserCipher {
 
     private String mText;
@@ -10,9 +8,7 @@ public class CeaserCipher {
         this.mShift = mShift;
     }
 
-    public String getText() {
-        return mText;
-    }
+
 
     public int getShift() {
         return mShift;
