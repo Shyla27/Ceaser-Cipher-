@@ -1,35 +1,46 @@
+import java.io.Console;
 import java.util.Scanner;
-
 
 public class App {
     public static void main(String[] args) {
-        Scanner keyboard = new Scanner(System.in);
-        String password;
-        int key;
+        Console myConsole = System.console();
+        Scanner myScanner = new Scanner(System.in);
 
-        System.out.print("Please enter the sentence: ");
-        password = keyboard.nextLine();
+        boolean runProgram = true;
 
-        do {
-            System.out.print("Please enter a key between 1 to 25: ");
-            key = keyboard.nextInt();
+        while (runProgram) {
+            System.out.println("Welcome to a Caesar Ciphar program. Would you like to encrypt or decrypt a statement or would you like to exit?");
+            String userAnswer = myConsole.readLine();
 
-            //here we handle  errors
-            if (key < 1 || key > 25) {
-                System.out.printf(" The key must be between 1 and 25, you entered %d.\n", key);
+
+            if (userAnswer.equals("encrypt")) {
+                System.out.println("Please enter a statement that you would like to encrypt:");
+                String statement = myConsole.readLine();
+
+                System.out.println("Please enter an encryption key");
+                int key = myScanner.nextInt();
+
+                CaesarCipher userEncryption = new CaesarCipher(statement, key);
+                String encryption = userEncryption.isActuallyEncrypted(statement, key);
+
+                System.out.println("The encrypted statement is: " + encryption);
+            } else if (userAnswer.equals("decrypt")) {
+                System.out.println("Please enter a statement to decrypt: ");
+                String statementDecrypt = myConsole.readLine();
+
+                System.out.println("Please enter an decryption key");
+                int keyDecrypt = myScanner.nextInt();
+
+                CaesarCipher userDecryption = new CaesarCipher(statementDecrypt, keyDecrypt);
+                String decryption = userDecryption.toDecrypt(statementDecrypt, keyDecrypt);
+
+                System.out.println("The decrypted statement is: " + decryption);
+            } else if (userAnswer.equals("exit")){
+                runProgram = false;
             }
-        } while (key < 1 || key > 25);
-
-
-        System.out.println("Password:\t" + password);
-        CeaserCipherTest ceaserCipher = new CeaserCipherTest(password, key);
-        Object encryption = ceaserCipher.cipher();
-        System.out.println("Encrypted:\t" + encryption);
-
-        //decryption
-        CeaserCipherTest ceaserCipherDec = new CeaserCipherTest(encryption, -key);
-        System.out.println("Decrypted:\t" + ceaserCipherDec.cipher());
-
+            else {
+                System.out.println("Sorry we could not recognise your input");
+            }
+        }
     }
-
 }
