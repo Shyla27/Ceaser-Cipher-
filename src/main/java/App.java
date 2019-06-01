@@ -22,12 +22,12 @@ public class App {
 
 
         System.out.println("Password:\t" + password);
-        CeaserCipher ceaserCipher = new CeaserCipher(password, key);
-        String encryption = ceaserCipher.cipher();
+        CeaserCipherTest ceaserCipher = new CeaserCipherTest(password, key);
+        Object encryption = ceaserCipher.cipher();
         System.out.println("Encrypted:\t" + encryption);
 
         //decryption
-        CeaserCipher ceaserCipherDec = new CeaserCipher(encryption, -key);
+        CeaserCipherTest ceaserCipherDec = new CeaserCipherTest(encryption, -key);
         System.out.println("Decrypted:\t" + ceaserCipherDec.cipher());
 
     }

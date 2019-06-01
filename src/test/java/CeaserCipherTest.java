@@ -1,16 +1,28 @@
-import org.junit.*;
-import static org.junit.Assert.*;
-import java.util.List;
-import  java.util.ArrayList;
+import static org.junit.Assert.assertEquals;
 
-public class CeaserCipher{
+import org.junit.Test;
+
+public class CeaserCipherTest{
 
 
-    @Test
+    public CeaserCipherTest(String password, int key) {
+	}
+
+
+	public CeaserCipherTest(Object encryption, int key) {
+	}
+
+
+	@Test
     public void rotateCharacter_ShiftsCharacterCorrectNumberofTimesAtEndOfAlphabet_char(){
         char input='x';
         char expectedOutput='h';
-        assertEquals(expectedOutput, CeaserCipher.cipher(input, "1"));
+        assertEquals(expectedOutput, CeaserCipherTest.cipher(input, "1"));
+    }
+
+
+    static Object cipher(int i, String string) {
+        return null;
     }
 
     @Test
@@ -18,7 +30,20 @@ public class CeaserCipher{
         char input='b';
         char expectedOutput='i';
 
-        assertEquals(expectedOutput, CeaserCipher.cipher(input, 7));
+        assertEquals(expectedOutput, CeaserCipherTest(input, 7));
     }
+
+    private Object CeaserCipherTest(char input, int i) {
+        return null;
+    }
+
+    static Object cipher() {
+        return null;
+    }
+
+
+	public String cipher(int i, int key) {
+		return null;
+	}
 
 }

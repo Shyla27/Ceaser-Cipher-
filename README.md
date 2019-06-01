@@ -1,23 +1,30 @@
 ### Ceaser Cipher
  this an encoding and decoding program that takes in input from a user and encryts the inputed text.
 
- ### Author 
- Shyla Bernice 
-
- ### BDD
+### Author 
+ ***Shyla Bernice*** 
 
 
- ### Set up instructions
-install java 
-install gradle 
-install a java software development kit 
-use the command 'gradle run' on your terminal  to run the program 
- ### Bugs 
+
+### Set up instructions
+*install java 
+*install gradle 
+*install a java software development kit 
+* once you have all this ,clone my  repo and open it in your  ideal editor in my case i was using intellij. 
+*  navigate to the /build/classes/main directory that contains our compiled code 
+* launch the app using "java App"
+### Bugs 
 no bugs experienced 
- ### Tech used 
-Java 
-Git 
-IntelliJ IDEA
+### Tech used 
+*Java 
+*Git 
+*IntelliJ to write the code 
+*Gradle to test our project
+* 
+
+### Contact Info 
+Contact me via +254740902027 or sheilabernicew@gmail.com
+
 ### LICENSE
  MIT License
 
